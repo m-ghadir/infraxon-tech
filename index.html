@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infraxon Technology</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+
+    .logo h1 {
+      color: #ff7a00;
+      font-size: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff7a00;
+    }
+
+    .hero {
+      height: 100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1974&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h2 {
+      font-size: 65px;
+      margin-bottom: 25px;
+      color: #ff7a00;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.9;
+      color: #e2e8f0;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      background: linear-gradient(to right,#ff7a00,#38bdf8);
+      padding: 16px 40px;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .services {
+      padding: 100px 50px;
+      background: #111827;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #cbd5e1;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+      border-color: #ff7a00;
+    }
+
+    .card h3 {
+      color: #ff7a00;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #020617;
+      padding: 35px;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    @media(max-width:768px){
+      header {
+        padding: 15px 20px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="Infraxon Logo">
+    <h1>Infraxon Technology</h1>
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>
+      Advanced <span>Infrastructure</span><br>
+      & IT Solutions
+    </h2>
+
+    <p>
+      Infraxon Technology provides professional Network Infrastructure,
+      Data Center Solutions, CCTV Systems, Cybersecurity, Server Management
+      and Enterprise IT Services with modern technology and reliable support.
+    </p>
+
+    <a href="#" class="btn">Explore Services</a>
+  </div>
+</section>
+
+<section class="services">
+
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Professional solutions for companies and enterprise environments.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Network Infrastructure</h3>
+      <p>
+        Structured cabling, enterprise switches, routers and complete network implementation.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Data Center Solutions</h3>
+      <p>
+        Professional rack organization, servers, storage systems and enterprise architecture.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>CCTV & Security</h3>
+      <p>
+        Advanced surveillance systems with remote monitoring and smart protection.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Cyber Security</h3>
+      <p>
+        Secure your business using firewall systems, endpoint protection and monitoring.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Infraxon Technology — All Rights Reserved
+</footer>
+
+</body>
+</html>
