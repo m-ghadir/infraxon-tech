@@ -1,203 +1,319 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-body{
-background:#0f172a;
-color:white;
-overflow-x:hidden;
+body {
+  background: #0a0f1e;
+  color: white;
 }
 
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:18px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.45);
-backdrop-filter:blur(12px);
-z-index:1000;
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:15px;
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.logo h1 {
+  font-size: 26px;
+  color: white;
+}
+.logo h1 span {
+  color: #ff7a00;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #ff7a00;
+}
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
 }
 
-.logo-area img{
-width:60px;
-height:60px;
-object-fit:contain;
-background:white;
-padding:5px;
-border-radius:12px;
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1974&auto=format');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+}
+.hero-content {
+  max-width: 900px;
+  padding: 20px;
+}
+.hero h2 {
+  font-size: 58px;
+  margin-bottom: 20px;
+}
+.hero h2 span {
+  color: #ff7a00;
+}
+.english {
+  font-size: 22px;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+}
+.arabic {
+  font-size: 24px;
+  color: #ff7a00;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.contact-info {
+  background: rgba(0,0,0,0.6);
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 40px;
+  margin-bottom: 30px;
+}
+.contact-info p {
+  font-size: 18px;
+}
+.btn {
+  background: linear-gradient(135deg, #ff7a00, #ff9f2e);
+  padding: 14px 35px;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 
-.logo-area h1{
-font-size:28px;
-color:#ff7a00;
+/* Services */
+.services {
+  padding: 100px 60px;
+  background: #0f172a;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  font-size: 44px;
+  color: #ff7a00;
+}
+.arabic-sub {
+  color: #94a3b8;
+  font-size: 18px;
+  margin-top: 8px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: 1px solid #2d3a4e;
+}
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #ff7a00;
+}
+.card h3 {
+  color: #ff7a00;
+  margin-bottom: 15px;
+}
+.card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+.arabic-card {
+  font-size: 14px;
+  color: #ff9f2e;
+  margin-top: 10px;
 }
 
-.logo-area p{
-font-size:14px;
-color:#38bdf8;
-margin-top:3px;
+/* Gallery */
+.gallery {
+  padding: 80px 60px;
+  background: #0a0f1e;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-caption {
+  text-align: center;
+  padding: 12px;
+  background: #1e293b;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-font-size:16px;
-transition:0.3s;
+/* Contact Page */
+.contact-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+.contact-card {
+  background: #111827;
+  padding: 50px;
+  border-radius: 30px;
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  border: 1px solid #ff7a00;
+}
+.contact-card h2 {
+  font-size: 42px;
+  color: #ff7a00;
+}
+.arabic-contact {
+  color: #94a3b8;
+  margin: 10px 0 30px;
+}
+.contact-details p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+.whatsapp-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-wa {
+  background: #25d366;
+  padding: 12px 25px;
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-wa:hover {
+  opacity: 0.8;
 }
 
-nav a:hover{
-color:#ff7a00;
+/* Footer */
+footer {
+  background: #020617;
+  padding: 40px 20px;
+  text-align: center;
+  color: #94a3b8;
+}
+.footer-content img {
+  margin-bottom: 15px;
 }
 
-.hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-position:relative;
-text-align:center;
-padding:20px;
-}
-
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:linear-gradient(rgba(2,6,23,0.65),rgba(15,23,42,0.85));
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:900px;
-}
-
-.hero h2{
-font-size:65px;
-margin-bottom:20px;
-color:#ffffff;
-}
-
-.hero p{
-font-size:22px;
-line-height:1.8;
-color:#cbd5e1;
-}
-
-.contact-box{
-margin-top:30px;
-background:rgba(255,255,255,0.08);
-padding:18px;
-border-radius:15px;
-backdrop-filter:blur(10px);
-}
-
-.contact-box p{
-margin:8px 0;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:linear-gradient(to right,#ff7a00,#38bdf8);
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:translateY(-5px);
-}
-
-.services-preview{
-padding:100px 50px;
-background:#111827;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:50px;
-color:#38bdf8;
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-}
-
-.service-card{
-background:#1e293b;
-border-radius:20px;
-overflow:hidden;
-transition:0.3s;
-}
-
-.service-card:hover{
-transform:translateY(-10px);
-}
-
-.service-card img{
-width:100%;
-height:240px;
-object-fit:cover;
-}
-
-.service-card h3{
-padding:20px 20px 10px;
-color:#ff7a00;
-font-size:24px;
-}
-
-.service-card p{
-padding:0 20px 25px;
-color:#cbd5e1;
-line-height:1.8;
-}
-
-footer{
-background:#020617;
-padding:30px;
-text-align:center;
-color:#94a3b8;
-}
-
-@media(max-width:768px){
-
-header{
-padding:15px 20px;
-}
-
-.hero h2{
-font-size:42px;
-}
-
-.hero p{
-font-size:18px;
-}
-
-nav{
-display:none;
-}
-
+/* Responsive */
+@media (max-width: 900px) {
+  header {
+    padding: 15px 25px;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0f172a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  nav.show {
+    display: flex;
+  }
+  nav a {
+    margin: 10px 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .hero h2 {
+    font-size: 38px;
+  }
+  .english {
+    font-size: 18px;
+  }
+  .arabic {
+    font-size: 20px;
+  }
+  .services, .gallery {
+    padding: 60px 25px;
+  }
 }

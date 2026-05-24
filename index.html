@@ -1,51 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Infraxon Technology</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infraxon Technologies | IT Infrastructure A to Z</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/201157013882" class="whatsapp-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+</a>
+
 <header>
   <div class="logo">
-    <img src="logo.png">
-    <h1>Infraxon Technology</h1>
+    <img src="logo.png" alt="Infraxon Logo">
+    <h1>INFRAXON <span>TECHNOLOGIES</span></h1>
   </div>
-
   <nav>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Projects</a>
     <a href="contact.html">Contact</a>
   </nav>
+  <div class="mobile-menu" onclick="toggleMenu()">☰</div>
 </header>
 
-<!-- HERO -->
+<!-- Hero Section -->
 <section class="hero">
   <div class="hero-content">
-
-    <h2>Advanced Infrastructure & IT Solutions</h2>
-
-    <p>
-      Enterprise Networking • Data Centers • Cyber Security • CCTV Systems
-    </p>
-
-    <!-- CONTACT INFO -->
-    <div class="contact-box">
+    <h2>IT Infrastructure <span>A to Z</span></h2>
+    <p class="english">Survey | Cabling | Servers | CCTV | Sound Systems | Networks | Domains | Sophos</p>
+    <p class="arabic">من التأسيس للتشغيل – بنية تحتية متكاملة</p>
+    <div class="contact-info">
       <p>📞 01157013882 | 01225143481</p>
       <p>📧 info@infraxon-tech.com</p>
-      <p>💬 WhatsApp Available</p>
     </div>
-
-    <a class="btn" href="contact.html">Contact Us</a>
+    <a href="https://wa.me/201157013882" class="btn">Request Quotation</a>
   </div>
 </section>
 
+<!-- Services Section -->
+<section id="services" class="services">
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p class="arabic-sub">خدمات متكاملة – كل ما تحتاجه في مكان واحد</p>
+  </div>
+  <div class="cards">
+    <div class="card"><h3>🔍 1. Survey & Planning</h3><p>Site survey, needs assessment, and technical design.</p><p class="arabic-card">تقييم الموقع وتخطيط الحلول</p></div>
+    <div class="card"><h3>🔌 2. Structured Cabling</h3><p>Fiber optics, UTP cables, racks, and full infrastructure.</p><p class="arabic-card">مد كابلات وتأسيس البنية التحتية</p></div>
+    <div class="card"><h3>🖥️ 3. Servers & Data Center</h3><p>Server installation, racks, storage, and data center setup.</p><p class="arabic-card">تركيب سيرفرات وراكات</p></div>
+    <div class="card"><h3>📹 4. CCTV & Security</h3><p>IP cameras, recording systems, remote monitoring.</p><p class="arabic-card">كاميرات مراقبة وأنظمة أمنية</p></div>
+    <div class="card"><h3>🔊 5. Sound & AV Systems</h3><p>Conference rooms, speakers, displays, and audio solutions.</p><p class="arabic-card">صوتيات وشاشات تفاعلية</p></div>
+    <div class="card"><h3>🌐 6. Networks & Cybersecurity</h3><p>Switches, routers, Wi-Fi, domains, Sophos firewall, antivirus.</p><p class="arabic-card">شبكات ودومينات وحماية متكاملة</p></div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+  <div class="section-title">
+    <h2>Our Work</h2>
+    <p class="arabic-sub">صور حقيقية من مشاريعنا</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&auto=format" alt="Data Center"><div class="gallery-caption">Racks & Servers</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581092335871-4c2a5b7b7b5b?w=400&auto=format" alt="Cabling"><div class="gallery-caption">Structured Cabling</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581092335871-4c2a5b7b7b5b?w=400&auto=format" alt="CCTV"><div class="gallery-caption">CCTV Installation</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&auto=format" alt="Network"><div class="gallery-caption">Network Management</div></div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-© 2026 Infraxon Technology — All Rights Reserved
+  <div class="footer-content">
+    <img src="logo.png" alt="Infraxon" width="50">
+    <p>Infraxon Technologies – IT Infrastructure A to Z</p>
+    <p>📞 01157013882 | 01225143481 | 📧 info@infraxon-tech.com</p>
+    <p>© 2026 Infraxon Technologies. All Rights Reserved.</p>
+  </div>
 </footer>
 
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('show');
+  }
+</script>
 </body>
 </html>
