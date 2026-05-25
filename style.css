@@ -6,11 +6,11 @@
 }
 
 body {
-  background: #0a0f1e;
+  background: #0f172a;
   color: white;
 }
 
-/* WhatsApp Float */
+/* WhatsApp Float Button */
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -22,16 +22,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
   transition: 0.3s;
 }
 .whatsapp-float:hover {
   transform: scale(1.1);
-}
-.whatsapp-float img {
-  width: 35px;
-  height: 35px;
 }
 
 /* Header */
@@ -47,18 +47,8 @@ header {
   top: 0;
   z-index: 999;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.logo img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
 .logo h1 {
-  font-size: 26px;
+  font-size: 28px;
   color: white;
 }
 .logo h1 span {
@@ -74,17 +64,11 @@ nav a {
 nav a:hover {
   color: #ff7a00;
 }
-.mobile-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
 
-/* Hero Section */
+/* Hero Section with NEW Data Center Background */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1974&auto=format');
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -104,16 +88,16 @@ nav a:hover {
 .hero h2 span {
   color: #ff7a00;
 }
-.english {
+.hero p {
   font-size: 22px;
   color: #e2e8f0;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 .arabic {
-  font-size: 24px;
   color: #ff7a00;
-  margin-bottom: 25px;
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 25px;
 }
 .contact-info {
   background: rgba(0,0,0,0.6);
@@ -124,6 +108,7 @@ nav a:hover {
 }
 .contact-info p {
   font-size: 18px;
+  margin: 5px 0;
 }
 .btn {
   background: linear-gradient(135deg, #ff7a00, #ff9f2e);
@@ -140,7 +125,7 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Services */
+/* Services Section */
 .services {
   padding: 100px 60px;
   background: #0f172a;
@@ -160,7 +145,7 @@ nav a:hover {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 .card {
@@ -188,7 +173,7 @@ nav a:hover {
   margin-top: 10px;
 }
 
-/* Gallery */
+/* Gallery Section */
 .gallery {
   padding: 80px 60px;
   background: #0a0f1e;
@@ -202,7 +187,6 @@ nav a:hover {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  cursor: pointer;
 }
 .gallery-item img {
   width: 100%;
@@ -240,10 +224,6 @@ nav a:hover {
 .contact-card h2 {
   font-size: 42px;
   color: #ff7a00;
-}
-.arabic-contact {
-  color: #94a3b8;
-  margin: 10px 0 30px;
 }
 .contact-details p {
   font-size: 20px;
@@ -287,27 +267,11 @@ footer {
   }
   nav {
     display: none;
-    flex-direction: column;
-    background: #0f172a;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 15px;
-  }
-  nav.show {
-    display: flex;
-  }
-  nav a {
-    margin: 10px 0;
-  }
-  .mobile-menu {
-    display: block;
   }
   .hero h2 {
     font-size: 38px;
   }
-  .english {
+  .hero p {
     font-size: 18px;
   }
   .arabic {
