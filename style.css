@@ -64,11 +64,17 @@ nav a {
 nav a:hover {
   color: #ff7a00;
 }
+.mobile-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
 
-/* Hero Section with NEW Data Center Background */
+/* Hero Section - Data Center background brighter and clearer */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1600');
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1600');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -90,17 +96,19 @@ nav a:hover {
 }
 .hero p {
   font-size: 22px;
-  color: #e2e8f0;
+  color: #f1f5f9;
   margin-bottom: 15px;
 }
 .arabic {
-  color: #ff7a00;
+  color: #ffcc80;
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 25px;
+  text-shadow: 1px 1px 2px black;
 }
 .contact-info {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
   display: inline-block;
   padding: 12px 25px;
   border-radius: 40px;
@@ -225,6 +233,10 @@ nav a:hover {
   font-size: 42px;
   color: #ff7a00;
 }
+.arabic-contact {
+  color: #94a3b8;
+  margin: 10px 0 30px;
+}
 .contact-details p {
   font-size: 20px;
   margin: 15px 0;
@@ -256,8 +268,8 @@ footer {
   text-align: center;
   color: #94a3b8;
 }
-.footer-content img {
-  margin-bottom: 15px;
+.footer-content p {
+  margin: 8px 0;
 }
 
 /* Responsive */
@@ -267,6 +279,22 @@ footer {
   }
   nav {
     display: none;
+    flex-direction: column;
+    background: #0f172a;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  nav.show {
+    display: flex;
+  }
+  nav a {
+    margin: 10px 0;
+  }
+  .mobile-menu {
+    display: block;
   }
   .hero h2 {
     font-size: 38px;
